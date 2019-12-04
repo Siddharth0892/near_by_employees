@@ -1,0 +1,22 @@
+{
+  "name": "near_by_employees",
+  "version": "1.0.0",
+  "description": "To find the employees within 100km of range of given coordinates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siddharth0892/near_by_employees.git"
+  },
+  "keywords": [
+    "nearbyemployees"
+  ],
+  "author": "Siddharth Gupta <gupta.siddharth.sg@gmail.com> (https://github.com/Siddharth0892/nearby)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Siddharth0892/near_by_employees/issues"
+  },
+  "homepage": "https://github.com/Siddharth0892/near_by_employees#readme"
+}
