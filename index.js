@@ -1,3 +1,4 @@
+var linereader = require('line-reader');
 module.exports = {
 getEmployees: (modelKey, sortKey, lattitude, longitude) => {
   return modelKey.find({
@@ -13,16 +14,21 @@ getEmployees: (modelKey, sortKey, lattitude, longitude) => {
      }).sort(sortKey);
 },
 
-readAndSaveData: (path, modelKey) => {
-  lineReader.eachLine(path, 'utf-8', function(line) {
+readAndSaveData: (path, ModelKey) => {
+  try {
+    lineReader.eachLine(path, 'utf-8', function(line) {
     var recordFromTxt = JSON.parse(line);
-    var mongoObj={};
+    var mongoObj= new ModelKey()
     mongoObj.name = recordFromTxt.name;
     mongoObj.user_id = recordFromTxt.user_id;
     mongoObj.location = {};
     mongoObj.location.type = "Point";
     mongoObj.location.coordinates = [recordFromTxt.latitude, recordFromTxt.longitude];
-    return modelKey.save(mongoObj);
+    return mongoObj.save();
     });
-  } 
+  }catch(err) {
+    console.log(err)
+    return err;
+  }
+} 
 }

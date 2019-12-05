@@ -1,6 +1,6 @@
 {
   "name": "near_by_employees",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "To find the employees within 100km of range of given coordinates",
   "main": "index.js",
   "scripts": {
