@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Siddharth0892/near_by_employees/issues"
   },
-  "homepage": "https://github.com/Siddharth0892/near_by_employees#readme"
+  "homepage": "https://github.com/Siddharth0892/near_by_employees#readme",
+  "dependencies": {
+    "line-reader": "^0.4.0"
+  }
 }
