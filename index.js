@@ -1,4 +1,4 @@
-var linereader = require('line-reader');
+var lineReader = require('line-reader');
 module.exports = {
 getEmployees: (modelKey, sortKey, lattitude, longitude) => {
   return modelKey.find({
